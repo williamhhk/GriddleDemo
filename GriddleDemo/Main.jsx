@@ -11,8 +11,17 @@
         this.setState({ selectedRowId: row.props.data.id });
     }
     render() {
-        const rowMetadata = {
-            bodyCssClassName: rowData => (rowData.id === this.state.selectedRowId ? 'selected-red' : ''),
+        //const rowMetadata = {
+        //    bodyCssClassName: rowData => (rowData.id === this.state.selectedRowId ? 'selected-red' : ''),
+        //};
+
+        var rowMetadata = {
+            bodyCssClassName: function (rowData) {
+            if (this.state && (rowData.id === this.state.selectedRowId)) {
+                return "selected-red";
+            }
+            return "";
+            }
         };
 
 
