@@ -67,8 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fakeData.js" />
+    <Content Include="fakeData.jsx" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="TextInput.jsx" />
     <Content Include="webpack.config.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

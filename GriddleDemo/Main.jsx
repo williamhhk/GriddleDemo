@@ -1,54 +1,8 @@
 ﻿var React = require('react');
 var ReactDOM = require('react-dom');
 var Griddle = require('griddle-react');
-
-var fakeData =  [
-      {
-          "id": 0,
-          "name": "Mayer Leonard",
-          "city": "Kapowsin",
-          "state": "Hawaii",
-          "country": "United Kingdom",
-          "company": "Ovolo",
-          "favoriteNumber": 7
-      },
-      {
-          "id": 1,
-          "name": "Koch Becker",
-          "city": "Johnsonburg",
-          "state": "New Jersey",
-          "country": "Madagascar",
-          "company": "Eventage",
-          "favoriteNumber": 2
-      },
-      {
-          "id": 2,
-          "name": "Lowery Hopkins",
-          "city": "Blanco",
-          "state": "Arizona",
-          "country": "Ukraine",
-          "company": "Comtext",
-          "favoriteNumber": 3
-      },
-      {
-          "id": 3,
-          "name": "Walters Mays",
-          "city": "Glendale",
-          "state": "Illinois",
-          "country": "New Zealand",
-          "company": "Corporana",
-          "favoriteNumber": 6
-      },
-      {
-          "id": 4,
-          "name": "Shaw Lowe II",
-          "city": "Coultervillle",
-          "state": "Wyoming",
-          "country": "Ecuador",
-          "company": "Isologica",
-          "favoriteNumber": 2
-      }
-];
+var TextInput = require('./TextInput.jsx');
+var fakeData = require('./fakeData.jsx');
 
 var columnMeta = [
   {
@@ -147,44 +101,44 @@ class RootFrame extends React.Component {
     };
 }
 
-class TextInput extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+//class TextInput extends React.Component {
+//    constructor(props) {
+//        super(props);
+//        this.handleChange = this.handleChange.bind(this);
+//        this.handleSubmit = this.handleSubmit.bind(this);
+//    }
 
-    handleChange(e) {
-        console.log(e.target.value);
-        this.props.onUserInput(
-            this.txtInputValue.value
-        );
-    }
+//    handleChange(e) {
+//        console.log(e.target.value);
+//        this.props.onUserInput(
+//            this.txtInputValue.value
+//        );
+//    }
 
-    handleSubmit(event) {
-        console.log(this.txtInputValue.value);
-        //axios.post(this.props.UrlPost, { firstName: this.txtInputField.value })
-        //  .then(function (response) {
-        //  });
-        //event.preventDefault();
-    }
+//    handleSubmit(event) {
+//        console.log(this.txtInputValue.value);
+//        //axios.post(this.props.UrlPost, { firstName: this.txtInputField.value })
+//        //  .then(function (response) {
+//        //  });
+//        //event.preventDefault();
+//    }
 
-    render() {
-        return (
-          <form onSubmit={this.handleSubmit}>
-            <label>
-                Name:
-                <input type="text"
-                       placeholder="Enter/Select..."
-                       value={this.props.txtInputField}
-                       ref={(input) => this.txtInputValue = input}
-                       onChange={this.handleChange} />
-            </label>
-                <input type="submit" value="Submit" />
-          </form>
-    );
-        }
-}
+//    render() {
+//        return (
+//          <form onSubmit={this.handleSubmit}>
+//            <label>
+//                Name:
+//                <input type="text"
+//                       placeholder="Enter/Select..."
+//                       value={this.props.txtInputField}
+//                       ref={(input) => this.txtInputValue = input}
+//                       onChange={this.handleChange} />
+//            </label>
+//                <input type="submit" value="Submit" />
+//          </form>
+//    );
+//        }
+//}
 
 ReactDOM.render(
     <RootFrame UrlPost={'Home/SaveData'} />,
