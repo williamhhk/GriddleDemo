@@ -1,0 +1,22 @@
+{
+  "name": "griddle-demo",
+  "version": "1.0.0",
+  "description": "griddle-react-demo",
+  "scripts": {
+    "start": "webpack --progress --colors --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "griddle-react": "0.7.1",
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.21.0",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "webpack": "1.14.0"
+  }
+}
