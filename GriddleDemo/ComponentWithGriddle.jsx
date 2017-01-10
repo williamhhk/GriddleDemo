@@ -74,3 +74,5 @@ class ComponentWithGriddle extends React.Component {
         );
         }
 }
+
+module.exports = ComponentWithGriddle;

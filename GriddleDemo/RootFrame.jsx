@@ -24,3 +24,5 @@ class RootFrame extends React.Component {
        );
           };
 }
+
+module.exports = RootFrame;
